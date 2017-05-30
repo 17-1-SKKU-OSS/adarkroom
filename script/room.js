@@ -1095,7 +1095,7 @@ var Room = {
 				var cost = craftable.cost();
 				for(var c in cost) {
 					$("<div>").addClass('row_key').text(_(c)).appendTo(costTooltip);
-					$("<div>").addClass('row_val').text(cost[c]).appendTo(costTooltip);
+					$("<div>").addClass('row_val').text($SM.get('stores["'+_(c)+'"]')+"/"+cost[c]).appendTo(costTooltip); //aaaa
 				}
 				if(max && !craftable.button.hasClass('disabled')) {
 					Notifications.notify(Room, craftable.maxMsg);
@@ -1129,7 +1129,7 @@ var Room = {
 				var goodCost = good.cost();
 				for(var gc in goodCost) {
 					$("<div>").addClass('row_key').text(_(gc)).appendTo(goodsCostTooltip);
-					$("<div>").addClass('row_val').text(goodCost[gc]).appendTo(goodsCostTooltip);
+					$("<div>").addClass('row_val').text($SM.get('stores["'+_(gc)+'"]')+"/"+goodCost[gc]).appendTo(goodsCostTooltip);
 				}
 				if(goodsMax && !good.button.hasClass('disabled')) {
 					Notifications.notify(Room, good.maxMsg);

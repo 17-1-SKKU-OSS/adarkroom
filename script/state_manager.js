@@ -135,6 +135,9 @@ var StateManager = {
 			$SM.set(stateName, old + value, noEvent); //setState handles event and save
 		}
 
+		Room.updateBuildButtons();
+		//Events.updateButtons();
+
 		return err;
 	},
 
@@ -153,6 +156,10 @@ var StateManager = {
 			Engine.saveGame();
 			$SM.fireUpdate(parentName);
 		}
+
+		Room.updateBuildButtons();
+		//Events.updateButtons();
+
 		return err;
 	},
 

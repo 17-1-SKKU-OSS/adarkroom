@@ -186,6 +186,10 @@ div.row_val {
 	float: right;
 }
 
+/*div.stored {
+	float: left;
+}*/
+
 div.total {
 	font-weight: bold;
 }

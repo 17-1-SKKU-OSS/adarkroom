@@ -32,7 +32,7 @@ var Button = {
 			var costTooltip = $('<div>').addClass('tooltip ' + ttPos);
 			for(var k in options.cost) {
 				$("<div>").addClass('row_key').text(_(k)).appendTo(costTooltip);
-				$("<div>").addClass('row_val').text(options.cost[k]).appendTo(costTooltip);
+				$("<div>").addClass('row_val').text($SM.get('stores["'+k+'"]')+"/"+options.cost[k]).appendTo(costTooltip);
 			}
 			if(costTooltip.children().length > 0) {
 				costTooltip.appendTo(el);
